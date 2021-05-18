@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "966964196176",
+    "project_id": "pain-diary-27b1d",
+    "storage_bucket": "pain-diary-27b1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:966964196176:android:6ddae86422b45054e97255",
+        "android_client_info": {
+          "package_name": "com.example.personalisedmobilepaindiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "966964196176-05c76nvdjvh3113hlcqlkp0mj9lo5tug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2y9lbO62tznPLhBN5-fGTf1HNfEg7pdc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "966964196176-05c76nvdjvh3113hlcqlkp0mj9lo5tug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

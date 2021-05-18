@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+
+        <TextView
+            android:id="@+id/stepLabel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step Goal"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.091"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <View
+            android:id="@+id/top"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@color/green_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_wave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top" />
+
+        <TextView
+            android:id="@+id/entryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="How do you feel now?"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/painRange"
+            android:layout_width="230dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_boarder"
+            android:stepSize="1.0"
+            android:valueFrom="0.0"
+            android:valueTo="10.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.79"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:thumbColor="@color/green_2"
+            app:trackColor="@color/green_2"
+            app:trackColorActive="@color/grey" />
+
+        <ImageView
+            android:id="@+id/bodyIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/painLevelLabel"
+            app:srcCompat="@drawable/ic_body" />
+
+        <ImageView
+            android:id="@+id/gaugeIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:srcCompat="@drawable/ic_gauge" />
+
+        <TextView
+            android:id="@+id/painLevelLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pain Level"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.084"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gaugeIcon" />
+
+        <TextView
+            android:id="@+id/painLocationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pain Location"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.055"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bodyIcon" />
+
+        <Spinner
+            android:id="@+id/locSpinner"
+            style="@style/spinner_style"
+            android:layout_width="230dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="36dp"
+            android:dropDownWidth="match_parent"
+            android:entries="@array/loc_spinner"
+            android:popupBackground="@color/grey"
+            android:spinnerMode="dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.79"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/painRange" />
+
+        <ImageView
+            android:id="@+id/moodIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/painLocationLabel"
+            app:srcCompat="@drawable/ic_mood" />
+
+        <TextView
+            android:id="@+id/moodLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mood"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moodIcon" />
+
+        <Spinner
+            android:id="@+id/moodSpinner"
+            style="@style/spinner_style"
+            android:layout_width="230dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="36dp"
+            android:dropDownWidth="match_parent"
+            android:popupBackground="@color/grey"
+            android:spinnerMode="dropdown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.79"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locSpinner" />
+
+        <ImageView
+            android:id="@+id/stepIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moodLabel"
+            app:srcCompat="@drawable/ic_step" />
+
+        <TextView
+            android:id="@+id/stepLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Steps Taken"
+            android:textAlignment="center"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.068"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stepIcon" />
+
+        <EditText
+            android:id="@+id/stepTaken"
+            android:layout_width="230dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/rounded_boarder"
+            android:ems="10"
+            android:hint="How many steps you've taken"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.79"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/moodSpinner" />
+
+        <EditText
+            android:id="@+id/stepGoal"
+            android:layout_width="230dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/rounded_boarder"
+            android:ems="10"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:text="10000"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.79"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stepTaken" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.116"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stepLabel"
+            app:srcCompat="@drawable/ic_goal" />
+
+        <Button
+            android:id="@+id/set_alarm"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_background"
+            android:text="SET ALARM"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/saveButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/cancel_alarm"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_background"
+            android:text="CANCEL ALARM"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_background"
+            android:text="SAVE"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stepLabel2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rounded_background"
+            android:text="EDIT"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stepLabel2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/alarm_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="No alarm set!"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/set_alarm"
+            app:layout_constraintEnd_toEndOf="@+id/set_alarm"
+            app:layout_constraintStart_toStartOf="@+id/set_alarm" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
