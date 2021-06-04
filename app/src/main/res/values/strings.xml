@@ -23,5 +23,4 @@
     <string name="tab_item_1">Pain Location</string>
     <string name="tab_item_2">Steps Taken</string>
     <string name="tab_item_3">Pain &amp; Weather</string>
-    <string name="mapbox_access_token">pk.eyJ1IjoiY2hlc3RudXR0ZWNobm8iLCJhIjoiY2tvMmh2bzZpMDFjMzJ3bnF0eWFocWFrNiJ9.mwE1ejbl4dKJdSe5cPdZYg</string>
 </resources>
